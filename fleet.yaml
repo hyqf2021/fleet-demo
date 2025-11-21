@@ -1,4 +1,4 @@
-defaultNamespace: demo
+defaultNamespace: fleet-demo
 
 helm:
   chart: ./nginx-helm
