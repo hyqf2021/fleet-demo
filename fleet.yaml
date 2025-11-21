@@ -7,5 +7,8 @@ helm:
     - ./nginx-helm/values.yaml
 
 targets:
-- name: local
-  clusterName: local
+- name: all
+  clusterSelector:
+    matchExpressions:
+    - key: fleet.cattle.io/cluster-name
+      operator: Exists
