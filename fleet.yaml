@@ -5,10 +5,6 @@ helm:
   releaseName: nginx
   valuesFiles:
     - ./nginx-helm/values.yaml
-
 targets:
-- name: all
-  clusterSelector:
-    matchExpressions:
-    - key: fleet.cattle.io/cluster-name
-      operator: Exists
+- name: local
+  clusterName: local
