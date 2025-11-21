@@ -1,0 +1,14 @@
+defaultNamespace: demo
+
+helm:
+  chart: ./nginx-helm
+  releaseName: nginx
+  valuesFiles:
+    - ./nginx-helm/values.yaml
+
+targets:
+- name: local
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-display-name: local
+
